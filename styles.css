@@ -177,6 +177,9 @@ main,
 }
 
 .brand-text {
+  display: flex;
+  align-items: baseline;
+  gap: 22px;
   min-width: 0;
 }
 
@@ -2815,6 +2818,12 @@ h3 {
   .topbar {
     position: relative;
     top: auto;
+  }
+
+  .brand-text {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
 
   .nav {
