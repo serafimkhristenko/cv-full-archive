@@ -8,6 +8,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=nav-contact">
+  <style>
+    .hero-single {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 540px;
+      overflow: hidden;
+      background: #101015;
+    }
+    .hero-single-item {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 540px;
+      padding: 0;
+      margin: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .hero-single-item img {
+      width: 100%;
+      height: 100%;
+      min-height: 540px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .hero-single-item:hover img {
+      transform: scale(1.03);
+    }
+  </style>
 </head>
 <body>
   <canvas class="pixel-canvas" aria-hidden="true"></canvas>
@@ -56,87 +89,9 @@
       </div>
 
       <aside class="hero-panel" aria-label="Featured work preview">
-        <div class="hero-collage" data-hero-preview aria-label="Коллаж AI-работ">
-          <button class="hero-collage-item hero-board-a" type="button" data-gallery-item data-src="assets/board_ai_angel_armor.webp" data-title="AI visual - winged guardian" data-text="AI-визуал персонажа с объемной детализацией, светом и выразительным силуэтом.">
-            <img loading="lazy" src="assets/board_ai_angel_armor.webp" alt="AI-визуал с крылатым персонажем в золотой броне">
-          </button>
-          <button class="hero-collage-item hero-board-b" type="button" data-gallery-item data-src="assets/board_ai_glitch_skull.webp" data-title="AI visual - glitch skull" data-text="Постерный AI-визуал с glitch-эстетикой и цифровой фактурой.">
-            <img loading="lazy" src="assets/board_ai_glitch_skull.webp" alt="AI-постер с черепом и glitch-эффектом">
-          </button>
-          <button class="hero-collage-item hero-board-c" type="button" data-gallery-item data-src="assets/board_ai_pizza_jester.webp" data-title="AI visual - pizza jester" data-text="Персонажный AI-креатив для развлекательного и рекламного формата.">
-            <img loading="lazy" src="assets/board_ai_pizza_jester.webp" alt="AI-визуал с шутом и пиццей">
-          </button>
-          <button class="hero-collage-item hero-board-d" type="button" data-gallery-item data-src="assets/board_ai_bike_city.webp" data-title="AI visual - anime rider" data-text="Динамичный character visual для короткого контента и промо-обложек.">
-            <img loading="lazy" src="assets/board_ai_bike_city.webp" alt="AI-визуал с велосипедистом над городом">
-          </button>
-          <button class="hero-collage-item hero-board-e" type="button" data-gallery-item data-src="assets/board_ai_king.webp" data-title="AI visual - king character" data-text="Игровой персонажный визуал с чистым силуэтом и рекламной читаемостью.">
-            <img loading="lazy" src="assets/board_ai_king.webp" alt="AI-визуал короля с сундуком">
-          </button>
-          <button class="hero-collage-item hero-board-f" type="button" data-gallery-item data-src="assets/board_ai_pirate_house.webp" data-title="AI visual - 3D game asset" data-text="Объемный AI-ассет в casual-game стилистике для сайта, постера или видео.">
-            <img loading="lazy" src="assets/board_ai_pirate_house.webp" alt="AI-визуал пиратского домика в 3D-стиле">
-          </button>
-          <button class="hero-collage-item hero-board-g" type="button" data-gallery-item data-src="assets/board_ai_serpent_temple.webp" data-title="AI visual - serpent temple" data-text="Фэнтези-сцена для промо, key visual и атмосферного контента.">
-            <img loading="lazy" src="assets/board_ai_serpent_temple.webp" alt="AI-визуал храма со змеем">
-          </button>
-          <button class="hero-collage-item hero-board-h" type="button" data-gallery-item data-src="assets/board_ai_pharaoh.webp" data-title="AI visual - pharaoh character" data-text="Яркий персонажный кадр с понятным действием и сторителлингом.">
-            <img loading="lazy" src="assets/board_ai_pharaoh.webp" alt="AI-визуал фараона с помощниками">
-          </button>
-          <button class="hero-collage-item hero-board-i" type="button" data-gallery-item data-src="assets/board_ai_alchemist.webp" data-title="AI visual - alchemist scene" data-text="Сценический AI-визуал с персонажем, светом и выразительной эмоцией.">
-            <img loading="lazy" src="assets/board_ai_alchemist.webp" alt="AI-визуал алхимика в лаборатории">
-          </button>
-          <button class="hero-collage-item hero-board-j" type="button" data-gallery-item data-src="assets/board_ai_queen.webp" data-title="AI visual - queen portrait" data-text="Портретный AI-визуал для персонажного контента и промо-материалов.">
-            <img loading="lazy" src="assets/board_ai_queen.webp" alt="AI-портрет королевы в зеленом платье">
-          </button>
-          <button class="hero-collage-item hero-board-k" type="button" data-gallery-item data-src="assets/board_ai_halo_figure.webp" data-title="AI visual - halo figure" data-text="Черно-белый визуал с сильным контрастом, свечением и цифровой фактурой.">
-            <img loading="lazy" src="assets/board_ai_halo_figure.webp" alt="Черно-белый AI-визуал фигуры с сияющим кругом">
-          </button>
-          <button class="hero-collage-item hero-board-l" type="button" data-gallery-item data-src="assets/board_ai_sky_angel.webp" data-title="AI visual - sky angel" data-text="Кинематографичный кадр с зерном, небом и эффектом вспышки.">
-            <img loading="lazy" src="assets/board_ai_sky_angel.webp" alt="AI-визуал летящей фигуры в небе">
-          </button>
-          <button class="hero-collage-item hero-board-m" type="button" data-gallery-item data-src="assets/board_ai_thorn_poster.webp" data-title="AI visual - blackwork poster" data-text="Плакатная графика с контрастной фактурой и жестким визуальным стилем.">
-            <img loading="lazy" src="assets/board_ai_thorn_poster.webp" alt="Черно-белый AI-постер с шипами и черепами">
-          </button>
-          <button class="hero-collage-item hero-board-s" type="button" data-gallery-item data-src="assets/board_ai_cyborg_guardian.webp" data-title="AI visual - cyber guardian" data-text="Темный персонажный AI-визуал с детализацией брони, фактурами металла и сильным силуэтом.">
-            <img loading="lazy" src="assets/board_ai_cyborg_guardian.webp" alt="AI-визуал кибернетического персонажа">
-          </button>
-          <button class="hero-collage-item hero-board-t" type="button" data-gallery-item data-src="assets/board_ai_industrial_cylinder.webp" data-title="AI visual - industrial reliquary" data-text="Фэнтези-индустриальная сцена с объемной архитектурой и персонажем внутри стеклянной капсулы.">
-            <img loading="lazy" src="assets/board_ai_industrial_cylinder.webp" alt="AI-визуал индустриального города и стеклянной капсулы">
-          </button>
-          <button class="hero-collage-item hero-board-u" type="button" data-gallery-item data-src="assets/board_ai_bio_machine.webp" data-title="AI visual - bio machine" data-text="Сюрреалистичный объект на стыке биомеханики, архитектуры и постапокалиптического мира.">
-            <img loading="lazy" src="assets/board_ai_bio_machine.webp" alt="AI-визуал биомеханического объекта на фоне города">
-          </button>
-          <button class="hero-collage-item hero-board-v" type="button" data-gallery-item data-src="assets/board_ai_mask_totem.webp" data-title="AI visual - mask totem" data-text="Концепт-арт объекта с масками, механическими деталями и читаемым серым силуэтом.">
-            <img loading="lazy" src="assets/board_ai_mask_totem.webp" alt="AI-визуал механического тотема с несколькими масками">
-          </button>
-          <button class="hero-collage-item hero-board-w" type="button" data-gallery-item data-src="assets/board_ai_skull_closeup.webp" data-title="AI visual - black skull detail" data-text="Крупный портретный фрагмент для character design, key visual и промо-материалов.">
-            <img loading="lazy" src="assets/board_ai_skull_closeup.webp" alt="Крупный AI-визуал черного механического черепа">
-          </button>
-          <button class="hero-collage-item hero-board-x" type="button" data-gallery-item data-src="assets/board_ai_transparent_apple.webp" data-title="AI visual - transparent product" data-text="Глянцевый product visual с прозрачным материалом, отражениями и чистым белым фоном.">
-            <img loading="lazy" src="assets/board_ai_transparent_apple.webp" alt="AI-визуал прозрачного оранжевого яблока">
-          </button>
-          <button class="hero-collage-item hero-board-y" type="button" data-gallery-item data-src="assets/board_ai_glossy_pancakes.webp" data-title="AI visual - glossy breakfast" data-text="Food/product AI-визуал с мягким светом, глянцевой фактурой и рекламной подачей.">
-            <img loading="lazy" src="assets/board_ai_glossy_pancakes.webp" alt="AI-визуал панкейков с ягодами и сиропом">
-          </button>
-          <button class="hero-collage-item hero-board-z" type="button" data-gallery-item data-src="assets/board_ai_cereal_bowl.webp" data-title="AI visual - colorful cereal" data-text="Яркий food visual для легкого, дружелюбного контента и визуальных тестов.">
-            <img loading="lazy" src="assets/board_ai_cereal_bowl.webp" alt="AI-визуал миски с разноцветными хлопьями">
-          </button>
-          <button class="hero-collage-item hero-board-aa" type="button" data-gallery-item data-src="assets/board_ai_gold_skeleton.webp" data-title="AI visual - golden skeleton" data-text="Барочный персонажный визуал с золотой броней, украшениями и симметричной композицией.">
-            <img loading="lazy" src="assets/board_ai_gold_skeleton.webp" alt="AI-визуал золотого скелета в богато украшенной броне">
-          </button>
-          <button class="hero-collage-item hero-board-ab" type="button" data-gallery-item data-src="assets/ai_creative_14_gorilla_king.webp" data-title="AI creative - gorilla king" data-text="Персонажный AI-визуал для игровой рекламы: выразительный силуэт, корона, аксессуары и чистый светлый фон.">
-            <img loading="lazy" src="assets/ai_creative_14_gorilla_king.webp" alt="AI-визуал гориллы-короля с короной">
-          </button>
-          <button class="hero-collage-item hero-board-ai" type="button" data-gallery-item data-src="assets/board_ai_roblox_sunset.webp" data-title="AI visual - Roblox sunset" data-text="Style variant: тот же кадр в Roblox-эстетике — демонстрация управления стилем через промпт.">
-            <img loading="lazy" src="assets/board_ai_roblox_sunset.webp" alt="AI-визуал в стиле Roblox: девушка на закате у моря">
-          </button>
-          <button class="hero-collage-item hero-board-aj" type="button" data-gallery-item data-src="assets/board_ai_sunset_realism.webp" data-title="AI visual - sunset realism" data-text="Кинематографичный реалистичный вариант того же кадра: свет, ткань, атмосфера заката.">
-            <img loading="lazy" src="assets/board_ai_sunset_realism.webp" alt="AI-визуал реалистичный: девушка в платье на закате у моря">
-          </button>
-          <button class="hero-collage-item hero-board-ak" type="button" data-gallery-item data-src="assets/board_ai_sunset_pixar.webp" data-title="AI visual - sunset Pixar style" data-text="Pixar-вариант заката: тёплый свет, мягкие облака и атмосфера анимационного кино.">
-            <img loading="lazy" src="assets/board_ai_sunset_pixar.webp" alt="AI-визуал в стиле Pixar: девушка у моря на закате">
-          </button>
-          <button class="hero-collage-item hero-board-al" type="button" data-gallery-item data-src="assets/board_ai_sunset_drama.webp" data-title="AI visual - sunset drama" data-text="Драматичный вариант с контрастным светом, объёмными облаками и насыщенной золотой палитрой.">
-            <img loading="lazy" src="assets/board_ai_sunset_drama.webp" alt="AI-визуал драматичный закат: девушка в платье у моря">
+        <div class="hero-single" data-hero-preview aria-label="Hero AI visual">
+          <button class="hero-single-item" type="button" data-gallery-item data-src="assets/board_ai_serpent_temple.webp" data-title="AI visual - serpent temple" data-text="Фэнтези-сцена для промо, key visual и атмосферного контента.">
+            <img src="assets/board_ai_serpent_temple.webp" alt="AI-визуал храма со змеем">
           </button>
         </div>
         <div class="hero-label">
