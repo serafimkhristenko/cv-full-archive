@@ -9,6 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=nav-contact">
   <style>
+    /* Workflow button enlarged */
+    .pixel-button--lg {
+      min-height: 52px;
+      padding: 14px 28px;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      box-shadow: 5px 5px 0 var(--shadow);
+    }
+
     .hero-single {
       position: relative;
       width: 100%;
@@ -422,7 +431,7 @@
                   </section>
                 </div>
               </div>
-              <button class="workflow-spoiler-toggle" type="button" data-spoiler-toggle aria-expanded="false">Открыть подробный workflow</button>
+              <button class="workflow-spoiler-toggle pixel-button--lg" type="button" data-spoiler-toggle aria-expanded="false">Открыть подробный workflow</button>
             </div>
           </div>
         </article>
@@ -430,7 +439,53 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════
+
+    <section class="section shell" id="personal-research">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">personal visual research</div>
+          <h2>Personal Visual Research</h2>
+          <p class="section-subhead">Эксперименты с монохромом, glitch, биомеханикой и постерной графикой. Здесь проверяется личный визуальный язык, а не формат конкретного клиента.</p>
+        </div>
+      </div>
+      <article class="project-case project-case--reverse">
+        <div class="project-meta">
+          <div><span>Role</span><strong>Concept, generation, collage, retouch</strong></div>
+          <div><span>Direction</span><strong>Dark art, digital texture, surreal objects</strong></div>
+          <div><span>Focus</span><strong>Contrast, shape and atmosphere</strong></div>
+        </div>
+        <div class="project-gallery project-gallery--lead-right">
+          <button class="project-image project-image--lead" type="button" data-gallery-item data-src="assets/board_ai_halo_figure.webp" data-title="Personal Visual Research — Halo figure" data-text="Монохромное исследование свечения, сакральной иконографии и цифровой фактуры.">
+            <img loading="lazy" src="assets/board_ai_halo_figure.webp" alt="Halo figure">
+          </button>
+          <div class="project-support-grid project-support-grid--dense">
+            <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_glitch_skull.webp" data-title="Personal Visual Research — Glitch skull" data-text="Постерный glitch-эксперимент с цифровой фактурой.">
+              <img loading="lazy" src="assets/board_ai_glitch_skull.webp" alt="Glitch skull">
+            </button>
+            <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_cyborg_guardian.webp" data-title="Personal Visual Research — Cyber guardian" data-text="Тёмный character study с металлическими материалами.">
+              <img loading="lazy" src="assets/board_ai_cyborg_guardian.webp" alt="Cyber guardian">
+            </button>
+            <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_thorn_poster.webp" data-title="Personal Visual Research — Thorn poster" data-text="Blackwork-постер с органической структурой и жёстким контрастом.">
+              <img loading="lazy" src="assets/board_ai_thorn_poster.webp" alt="Thorn poster">
+            </button>
+            <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_bio_machine.webp" data-title="Personal Visual Research — Bio machine" data-text="Объект на стыке биомеханики и постапокалиптической архитектуры.">
+              <img loading="lazy" src="assets/board_ai_bio_machine.webp" alt="Bio machine">
+            </button>
+            <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_industrial_cylinder.webp" data-title="Personal Visual Research — Industrial reliquary" data-text="Индустриальная архитектура и фигура внутри стеклянной капсулы.">
+              <img loading="lazy" src="assets/board_ai_industrial_cylinder.webp" alt="Industrial reliquary">
+            </button>
+            <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_skull_closeup.webp" data-title="Personal Visual Research — Skull detail" data-text="Крупный фрагмент для исследования материала и character detail.">
+              <img loading="lazy" src="assets/board_ai_skull_closeup.webp" alt="Mechanical skull closeup">
+            </button>
+            <button class="project-image project-image--wide" type="button" data-gallery-item data-src="assets/board_ai_sky_angel.webp" data-title="Personal Visual Research — Sky angel" data-text="Кинематографичный кадр с зерном, небом и эффектом вспышки.">
+              <img loading="lazy" src="assets/board_ai_sky_angel.webp" alt="Sky angel">
+            </button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+<!-- ═══════════════════════════════════════════════════
          SMM CASES — в спойлерах
     ═══════════════════════════════════════════════════ -->
     <section class="section shell thumbnail-showcase" id="cases">
@@ -589,52 +644,6 @@
         </article>
 
       </div>
-    </section>
-
-
-    <section class="section shell" id="personal-research">
-      <div class="section-head">
-        <div>
-          <div class="section-kicker">personal visual research</div>
-          <h2>Personal Visual Research</h2>
-          <p class="section-subhead">Эксперименты с монохромом, glitch, биомеханикой и постерной графикой. Здесь проверяется личный визуальный язык, а не формат конкретного клиента.</p>
-        </div>
-      </div>
-      <article class="project-case project-case--reverse">
-        <div class="project-meta">
-          <div><span>Role</span><strong>Concept, generation, collage, retouch</strong></div>
-          <div><span>Direction</span><strong>Dark art, digital texture, surreal objects</strong></div>
-          <div><span>Focus</span><strong>Contrast, shape and atmosphere</strong></div>
-        </div>
-        <div class="project-gallery project-gallery--lead-right">
-          <button class="project-image project-image--lead" type="button" data-gallery-item data-src="assets/board_ai_halo_figure.webp" data-title="Personal Visual Research — Halo figure" data-text="Монохромное исследование свечения, сакральной иконографии и цифровой фактуры.">
-            <img loading="lazy" src="assets/board_ai_halo_figure.webp" alt="Halo figure">
-          </button>
-          <div class="project-support-grid project-support-grid--dense">
-            <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_glitch_skull.webp" data-title="Personal Visual Research — Glitch skull" data-text="Постерный glitch-эксперимент с цифровой фактурой.">
-              <img loading="lazy" src="assets/board_ai_glitch_skull.webp" alt="Glitch skull">
-            </button>
-            <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_cyborg_guardian.webp" data-title="Personal Visual Research — Cyber guardian" data-text="Тёмный character study с металлическими материалами.">
-              <img loading="lazy" src="assets/board_ai_cyborg_guardian.webp" alt="Cyber guardian">
-            </button>
-            <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_thorn_poster.webp" data-title="Personal Visual Research — Thorn poster" data-text="Blackwork-постер с органической структурой и жёстким контрастом.">
-              <img loading="lazy" src="assets/board_ai_thorn_poster.webp" alt="Thorn poster">
-            </button>
-            <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_bio_machine.webp" data-title="Personal Visual Research — Bio machine" data-text="Объект на стыке биомеханики и постапокалиптической архитектуры.">
-              <img loading="lazy" src="assets/board_ai_bio_machine.webp" alt="Bio machine">
-            </button>
-            <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_industrial_cylinder.webp" data-title="Personal Visual Research — Industrial reliquary" data-text="Индустриальная архитектура и фигура внутри стеклянной капсулы.">
-              <img loading="lazy" src="assets/board_ai_industrial_cylinder.webp" alt="Industrial reliquary">
-            </button>
-            <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_skull_closeup.webp" data-title="Personal Visual Research — Skull detail" data-text="Крупный фрагмент для исследования материала и character detail.">
-              <img loading="lazy" src="assets/board_ai_skull_closeup.webp" alt="Mechanical skull closeup">
-            </button>
-            <button class="project-image project-image--wide" type="button" data-gallery-item data-src="assets/board_ai_sky_angel.webp" data-title="Personal Visual Research — Sky angel" data-text="Кинематографичный кадр с зерном, небом и эффектом вспышки.">
-              <img loading="lazy" src="assets/board_ai_sky_angel.webp" alt="Sky angel">
-            </button>
-          </div>
-        </div>
-      </article>
     </section>
 
     <section class="cta-band shell">
