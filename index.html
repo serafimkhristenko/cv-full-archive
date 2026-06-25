@@ -9,6 +9,31 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=nav-contact">
   <style>
+    /* Pixel line replacing section-kicker */
+    .section-kicker-line {
+      width: 100%;
+      height: 3px;
+      margin-bottom: 18px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--acid) 0px,
+        var(--acid) 6px,
+        transparent 6px,
+        transparent 10px
+      );
+      image-rendering: pixelated;
+    }
+
+    /* Tools list style */
+    .tools-list {
+      margin-top: 10px;
+      color: var(--quiet);
+      font-family: "DM Mono", monospace;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      line-height: 1.8;
+    }
+
     /* Workflow button enlarged */
     .pixel-button--lg {
       min-height: 52px;
@@ -262,11 +287,9 @@
         <!-- AI-галерея с фильтром -->
         <article class="production-panel creative-production-panel">
           <div class="production-copy">
-            <div class="section-kicker">full production pipeline</div>
+            <div class="section-kicker-line"></div>
             <h3>AI-рекламные креативы для iGaming и character-led продуктов</h3>
-            <p>Создавал статичные и анимированные рекламные креативы для casino / betting и AI-продуктов, где важны персонажи, быстрые визуальные гипотезы, читаемый hook и адаптация под short-form.</p>
-            <p>Генерировал персонажей, key visuals, постеры, CGI-сцены, keyframes и motion-ready видеоряд. Такой формат можно быстро превращать в Reels / Shorts, мемы, посты, баннеры и тестовые креативы под VK, Telegram, Instagram и YouTube Shorts.</p>
-            <p>Учитывал platform specs, CTR / ER, конверсии и compliance-ограничения.</p>
+            <p class="tools-list">Nano Banana · Higgsfield Soul 2.0 · Rave 2 · Flux 2.2 · Midjourney · Grok Imagine · Recraft 4.1 · Adobe Firefly · Photoshop · Illustrator · графический планшет · воображение · ресёрч</p>
             <div class="chip-row">
               <span class="chip">150+ creatives</span>
               <span class="chip">15 CGI video ads</span>
