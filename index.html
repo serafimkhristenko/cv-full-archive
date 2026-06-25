@@ -9,6 +9,56 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=nav-contact">
   <style>
+    /* Wide banner block before AI-PRODUCTION */
+    .wide-banner-block {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .wide-banner-wrap {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+    .wide-banner-wrap .production-wide-visual {
+      display: block;
+      width: 100%;
+      padding: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .wide-banner-wrap .production-wide-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.4s ease;
+    }
+    .wide-banner-wrap:hover .production-wide-visual img {
+      transform: scale(1.02);
+    }
+    .wide-banner-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px 20px;
+      background: rgba(10, 10, 12, 0.82);
+      border-top: 1px solid var(--acid);
+      backdrop-filter: blur(6px);
+      pointer-events: none;
+    }
+    .wide-banner-label strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+      font-size: 15px;
+    }
+    .wide-banner-label span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
     /* Stat card divider line */
     .stat-line {
       width: 100%;
@@ -269,6 +319,21 @@
       </aside>
     </section>
 
+    
+    <div class="wide-banner-block shell">
+      <div class="wide-banner-wrap">
+        <button class="production-wide-visual" type="button" data-gallery-item data-src="assets/ai_production_wide_jungle.webp" data-title="B2B campaign — key visual" data-text="Широкий key visual для B2B-рекламной кампании: разработка персонажей, динамичной сцены и визуальной концепции под серию коротких AI-видео.">
+          <img loading="lazy" src="assets/ai_production_wide_jungle.webp" alt="AI-креатив с персонажами в джунглях">
+        </button>
+        <div class="wide-banner-label">
+          <div>
+            <strong>B2B campaign · key visual · iGaming</strong>
+            <span>Nano Banana · Higgsfield · Rave 2 · персонажи + сцена для рекламной кампании. Разработано под баннер, видеоряд и short-form контент.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ═══════════════════════════════════════════════════
          AI-PRODUCTION — главная секция
     ═══════════════════════════════════════════════════ -->
@@ -359,9 +424,6 @@
           </div>
         </article>
 
-        <button class="production-wide-visual" type="button" data-gallery-item data-src="assets/ai_production_wide_jungle.webp" data-title="B2B campaign - character development" data-text="Широкий key visual для B2B-рекламной кампании: разработка персонажей, динамичной сцены и визуальной концепции, которую можно продолжить в серии коротких AI-видео.">
-          <img loading="lazy" src="assets/ai_production_wide_jungle.webp" alt="AI-креатив с персонажами в джунглях">
-        </button>
 
         <div class="video-demo-section">
           <div class="production-copy">
