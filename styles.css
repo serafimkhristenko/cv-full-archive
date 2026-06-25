@@ -989,15 +989,15 @@ h1 {
 }
 
 .section {
-  padding: 52px 0;
+  padding: clamp(48px, 7vw, 96px) 0;
 }
 
 .thumbnail-showcase.section {
-  padding-top: 80px;
+  padding-top: clamp(48px, 7vw, 96px);
 }
 
 #ai-production.section {
-  padding-top: 80px;
+  padding-top: clamp(48px, 7vw, 96px);
 }
 
 .section-head {
@@ -1005,7 +1005,7 @@ h1 {
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 18px;
   align-items: end;
-  margin-bottom: 22px;
+  margin-bottom: clamp(24px, 3vw, 40px);
 }
 
 .section-kicker {
