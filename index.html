@@ -9,6 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=nav-contact">
   <style>
+    /* Stat card divider line */
+    .stat-line {
+      width: 100%;
+      height: 2px;
+      margin: 8px 0;
+      background: var(--acid);
+      box-shadow: 0 1px 0 rgba(0,0,0,0.6), 0 -1px 0 rgba(0,0,0,0.3);
+      opacity: 0.85;
+    }
+
     /* Pixel line replacing section-kicker */
     .section-kicker-line {
       width: 100%;
@@ -274,22 +284,26 @@
           <div class="production-stat">
             <span>150+</span>
             <strong>AI визуалов</strong>
-            <p>Разработал и отрисовал более 150 сцен.</p>
+            <div class="stat-line"></div>
+            <p>создал</p>
           </div>
           <div class="production-stat">
             <span>40+</span>
             <strong>персонажей</strong>
-            <p>Разработка персонажей с нуля.</p>
+            <div class="stat-line"></div>
+            <p>разработал с нуля</p>
           </div>
           <div class="production-stat">
             <span>400+</span>
-            <strong>AI-avatar videos</strong>
-            <p>Короткие видео без съёмок.</p>
+            <strong>AI-avatar видео</strong>
+            <div class="stat-line"></div>
+            <p>выложил без съёмок</p>
           </div>
           <div class="production-stat">
             <span>&lt;48h</span>
-            <strong>Бриф → Публикация</strong>
-            <p>От идеи до готового ролика — меньше двух суток.</p>
+            <strong>проходит</strong>
+            <div class="stat-line"></div>
+            <p>между брифом и публикацией</p>
           </div>
         </div>
 
