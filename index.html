@@ -27,11 +27,15 @@
       background: none;
       border: none;
       cursor: pointer;
+      line-height: 0;
     }
     .wide-banner-wrap .production-wide-visual img {
       display: block;
       width: 100%;
       height: auto;
+      max-height: 420px;
+      object-fit: cover;
+      object-position: center center;
       transition: transform 0.4s ease;
     }
     .wide-banner-wrap:hover .production-wide-visual img {
@@ -39,15 +43,33 @@
     }
     .wide-banner-label {
       position: absolute;
-      bottom: 16px;
       left: 16px;
-      max-width: 480px;
-      padding: 14px 18px;
-      background: rgba(10, 10, 12, 0.88);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-left: 2px solid var(--acid);
-      backdrop-filter: blur(8px);
+      right: 16px;
+      bottom: 16px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      align-items: end;
+      z-index: 40;
+      padding: 14px;
+      background: rgba(16, 16, 19, 0.96);
+      border: 1px solid rgba(200, 241, 53, 0.58);
+      box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.55), 0 0 28px rgba(200, 241, 53, 0.1);
+      backdrop-filter: blur(18px);
       pointer-events: none;
+    }
+    .wide-banner-label strong {
+      display: block;
+      color: #fff;
+      font-family: "Syne", Inter, system-ui, sans-serif;
+      font-size: 18px;
+      line-height: 1.15;
+    }
+    .wide-banner-label span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 11px;
     }
     .wide-banner-label strong {
       display: block;
