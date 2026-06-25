@@ -12,16 +12,43 @@
     /* Pixel line replacing section-kicker */
     .section-kicker-line {
       width: 100%;
-      height: 3px;
-      margin-bottom: 18px;
-      background: repeating-linear-gradient(
-        90deg,
-        var(--acid) 0px,
-        var(--acid) 6px,
-        transparent 6px,
-        transparent 10px
-      );
+      height: 2px;
+      margin-bottom: 22px;
+      background: var(--acid);
+      box-shadow: 0 1px 0 rgba(0,0,0,0.6), 0 -1px 0 rgba(0,0,0,0.3);
       image-rendering: pixelated;
+      opacity: 0.85;
+    }
+
+    /* project-case-head layout (from cv-variant) */
+    .production-panel-head {
+      display: grid;
+      grid-template-columns: 36px minmax(260px, 0.9fr) minmax(260px, 0.7fr);
+      gap: clamp(16px, 3vw, 40px);
+      align-items: end;
+      margin-bottom: 28px;
+    }
+    .production-panel-number {
+      color: var(--acid);
+      font-family: "DM Mono", monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      padding-top: 4px;
+    }
+    .production-panel-head h3 {
+      font-size: clamp(22px, 3vw, 38px);
+      margin: 0;
+    }
+    .production-panel-head > p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    @media (max-width: 700px) {
+      .production-panel-head {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* Tools list style */
@@ -288,14 +315,15 @@
         <article class="production-panel creative-production-panel">
           <div class="production-copy">
             <div class="section-kicker-line"></div>
-            <h3>AI-рекламные креативы для iGaming и character-led продуктов</h3>
-            <p class="tools-list">Nano Banana · Higgsfield Soul 2.0 · Rave 2 · Flux 2.2 · Midjourney · Grok Imagine · Recraft 4.1 · Adobe Firefly · Photoshop · Illustrator · графический планшет · воображение · ресёрч</p>
-            <div class="chip-row">
-              <span class="chip">150+ creatives</span>
-              <span class="chip">15 CGI video ads</span>
-              <span class="chip">consistent characters</span>
-              <span class="chip">Nano Banana / Seedance</span>
-              <span class="chip">Figma / Photoshop</span>
+            <div class="production-panel-head">
+              <span class="production-panel-number">01</span>
+              <h3>AI-рекламные креативы для iGaming и character-led продуктов</h3>
+              <p>Серия персонажей и CGI-сцен для casino / betting рекламы. Быстро считываемый герой, сильный hook, консистентный образ между статикой и motion.</p>
+            </div>
+            <div class="project-meta">
+              <div><span>Role</span><strong>Concept, generation, selection, retouch</strong></div>
+              <div><span>Tools</span><strong>Nano Banana · Higgsfield · Rave 2 · Flux 2.2 · Midjourney · Recraft 4.1 · Photoshop</strong></div>
+              <div><span>Output</span><strong>150+ creatives / 15 CGI video ads</strong></div>
             </div>
           </div>
 
@@ -341,12 +369,16 @@
 
         <div class="video-demo-section">
           <div class="production-copy">
-            <div class="section-kicker">B2B CAMPAIGN / CHARACTER DEVELOPMENT</div>
-            <h3>Разработка персонажа и рекламной концепции для B2B-кампании</h3>
-            <p>Два примера для B2B-заказчика: разработка персонажа, визуальной идеи и сценария рекламной кампании, затем генерация кадров, motion и монтаж коротких роликов.</p>
-            <div class="chip-row">
-              <span class="chip">AI motion</span>
-              <span class="chip">video ads</span>
+            <div class="section-kicker-line"></div>
+            <div class="production-panel-head">
+              <span class="production-panel-number">02</span>
+              <h3>Разработка персонажа и рекламной концепции для B2B-кампании</h3>
+              <p>Персонаж, визуальная идея и сценарий — затем генерация кадров, motion и монтаж коротких роликов для B2B-заказчика.</p>
+            </div>
+            <div class="project-meta">
+              <div><span>Role</span><strong>Concept, character design, motion, edit</strong></div>
+              <div><span>Tools</span><strong>Nano Banana · Kling AI · Runway · CapCut</strong></div>
+              <div><span>Output</span><strong>AI motion / video ads</strong></div>
             </div>
           </div>
           <div class="production-visual ai-video-board" aria-label="AI-production video demos">
@@ -373,15 +405,16 @@
 
         <article class="production-panel avatar-production-panel">
           <div class="production-copy">
-            <div class="section-kicker">400+ videos / avatar + voice pipeline</div>
-            <h3>Серия AI-avatar видео</h3>
-            <p>Полный пайплайн производства коротких видео без съемок: сценарий → HeyGen → ElevenLabs → edit → publish.</p>
-            <p>Самостоятельно вел весь процесс: от идеи и текста до финального ролика.</p>
-            <div class="chip-row">
-              <span class="chip">400+ videos</span>
-              <span class="chip">HeyGen</span>
-              <span class="chip">ElevenLabs</span>
-              <span class="chip">CapCut</span>
+            <div class="section-kicker-line"></div>
+            <div class="production-panel-head">
+              <span class="production-panel-number">03</span>
+              <h3>Серия AI-avatar видео</h3>
+              <p>Полный пайплайн без съёмок: сценарий → аватар → голос → монтаж → публикация. Весь процесс самостоятельно.</p>
+            </div>
+            <div class="project-meta">
+              <div><span>Role</span><strong>Script, avatar direction, voice, edit, publish</strong></div>
+              <div><span>Tools</span><strong>HeyGen · ElevenLabs · CapCut</strong></div>
+              <div><span>Output</span><strong>400+ videos</strong></div>
             </div>
           </div>
           <div class="production-visual creative-grid avatar-video-placeholders" aria-label="AI avatar video demos">
@@ -396,8 +429,12 @@
           <div class="production-copy">
             <div class="workflow-spoiler" data-spoiler>
               <div class="workflow-spoiler-body" data-spoiler-body>
-                <div class="section-kicker">keyframes / low-res demos / token economy</div>
-                <h3>Как устроен production-процесс</h3>
+                <div class="section-kicker-line"></div>
+                <div class="production-panel-head" style="margin-bottom:16px">
+                  <span class="production-panel-number">04</span>
+                  <h3 style="font-size:clamp(20px,2.5vw,32px)">Как устроен production-процесс</h3>
+                  <p>Итерационная система: сначала keyframes и low-res демо, финальный рендер — только для выбранных. Экономия токенов, времени и бюджета.</p>
+                </div>
                 <p class="workflow-lead">Строю AI-production как систему итераций: сначала keyframes и low-res демо, финальный рендер — только для выбранных вариантов. Так экономятся токены, время и бюджет.</p>
                 <div class="workflow-detail-grid">
                   <section class="workflow-detail-card">
@@ -426,7 +463,7 @@
     <section class="section shell" id="personal-research">
       <div class="section-head">
         <div>
-          <div class="section-kicker">personal visual research</div>
+          <div class="section-kicker-line"></div>
           <h2>Personal Visual Research</h2>
           <p class="section-subhead">Эксперименты с монохромом, glitch, биомеханикой и постерной графикой. Здесь проверяется личный визуальный язык, а не формат конкретного клиента.</p>
         </div>
@@ -482,7 +519,7 @@
         <article class="case-spoiler" data-spoiler>
           <div class="case-spoiler-summary">
             <div class="case-spoiler-meta">
-              <span class="section-kicker">Instagram · 2024–2026</span>
+              <div class="section-kicker-line"></div>
               <h3>The Gallery</h3>
               <p>Независимое медиа для художников — с нуля до 12k органически, top posts 23k–47k views.</p>
             </div>
@@ -532,7 +569,7 @@
         <article class="case-spoiler" data-spoiler>
           <div class="case-spoiler-summary">
             <div class="case-spoiler-meta">
-              <span class="section-kicker">Telegram + Instagram · 2025–2026</span>
+              <div class="section-kicker-line"></div>
               <h3>Кино с Алисой</h3>
               <p>Онлайн-киноклуб — Instagram x4 (2.5k → 10k), 40–100 продаж на каждый сезон.</p>
             </div>
@@ -580,7 +617,7 @@
         <article class="case-spoiler" data-spoiler>
           <div class="case-spoiler-summary">
             <div class="case-spoiler-meta">
-              <span class="section-kicker">Telegram · VK</span>
+              <div class="section-kicker-line"></div>
               <h3>Pay Simple</h3>
               <p>Подписочный сервис — 1000+ новых пользователей за 3 месяца, снижение ручной коммуникации.</p>
             </div>
