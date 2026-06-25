@@ -45,15 +45,14 @@
     }
     .wide-banner-label {
       position: absolute;
-      left: 16px;
       right: 16px;
       bottom: 16px;
+      left: auto;
+      max-width: 380px;
       display: grid;
       grid-template-columns: 1fr;
-      gap: 12px;
-      align-items: end;
       z-index: 40;
-      padding: 14px;
+      padding: 10px 14px;
       background: rgba(16, 16, 19, 0.96);
       border: 1px solid rgba(200, 241, 53, 0.58);
       box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.55), 0 0 28px rgba(200, 241, 53, 0.1);
@@ -64,14 +63,14 @@
       display: block;
       color: #fff;
       font-family: "Syne", Inter, system-ui, sans-serif;
-      font-size: 18px;
-      line-height: 1.15;
+      font-size: 14px;
+      line-height: 1.2;
     }
     .wide-banner-label span {
       display: block;
       margin-top: 3px;
       color: var(--muted);
-      font-size: 11px;
+      font-size: 10px;
     }
     .wide-banner-label strong {
       display: block;
