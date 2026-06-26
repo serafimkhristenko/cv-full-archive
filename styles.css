@@ -2457,11 +2457,29 @@ h3 {
   gap: 24px;
   align-items: center;
   margin: 96px 0 72px;
-  padding: 22px 26px;
-  background: rgba(42, 42, 47, 0.7);
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--acid);
-  box-shadow: 8px 8px 0 var(--shadow);
+  padding: 32px 36px;
+  background: rgba(28, 28, 32, 0.92);
+  border: 1px solid rgba(200,241,53,0.25);
+  border-left: 4px solid var(--acid);
+  box-shadow: 8px 8px 0 var(--shadow), 0 0 40px rgba(200,241,53,0.06);
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.pixel-button.secondary {
+  background: transparent;
+  color: var(--acid);
+  border: 2px solid rgba(200,241,53,0.45);
+  box-shadow: none;
+}
+.pixel-button.secondary:hover {
+  background: rgba(200,241,53,0.08);
+  border-color: var(--acid);
 }
 
 .cta-band strong {
