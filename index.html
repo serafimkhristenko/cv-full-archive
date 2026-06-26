@@ -256,6 +256,78 @@
       font-size: 13px;
       line-height: 1.45;
     }
+
+    /* ── Workflow panel ── */
+    .workflow-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 6px;
+      padding: 7px 16px;
+      background: transparent;
+      border: 1px solid rgba(200,241,53,0.35);
+      color: var(--acid);
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .workflow-toggle-btn:hover {
+      border-color: var(--acid);
+      background: rgba(200,241,53,0.07);
+    }
+    .workflow-toggle-btn .workflow-arrow {
+      transition: transform 0.25s;
+    }
+    .workflow-panel {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s ease;
+      overflow: hidden;
+    }
+    .workflow-panel.workflow-open {
+      grid-template-rows: 1fr;
+    }
+    .workflow-panel.workflow-open ~ .workflow-toggle-btn .workflow-arrow,
+    .workflow-toggle-btn:has(+ .workflow-panel.workflow-open) .workflow-arrow {
+      transform: rotate(180deg);
+    }
+    .workflow-content {
+      min-height: 0;
+      padding: 20px 0 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .workflow-item {
+      padding: 14px 16px;
+      border-left: 2px solid rgba(200,241,53,0.4);
+      background: rgba(200,241,53,0.03);
+    }
+    .workflow-label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--acid);
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .workflow-item p,
+    .workflow-item ul {
+      margin: 0;
+      color: var(--quiet);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .workflow-item ul {
+      padding-left: 16px;
+    }
+    .workflow-item ul li {
+      margin-bottom: 4px;
+    }
     .project-gallery {
       display: grid;
       grid-template-columns: minmax(0, 1.12fr) minmax(340px, 0.88fr);
@@ -438,6 +510,38 @@
               <div><span>Role</span><strong>Character design · Full pipeline</strong></div>
               <div><span>Tools</span><strong>Midjourney · Flux 2.2 · Recraft 4.1 · Grok Imagine · Adobe Firefly · Photoshop · Illustrator · графический планшет</strong></div>
               <div><span>Output</span><strong>40+ персонажей</strong></div>
+            </div>
+            <button class="workflow-toggle-btn" type="button" onclick="this.nextElementSibling.classList.toggle('workflow-open')">
+              Воркфлоу <span class="workflow-arrow">↓</span>
+            </button>
+            <div class="workflow-panel">
+              <div class="workflow-content">
+                <div class="workflow-item">
+                  <span class="workflow-label">Исследование</span>
+                  <p>20–30 примеров лица и тела — референсы по типажу, стилю, пропорциям.</p>
+                </div>
+                <div class="workflow-item">
+                  <span class="workflow-label">Описание персонажа</span>
+                  <p>Подробный промпт: лицо, тело, пропорции, кожа, волосы, стиль, характер.</p>
+                </div>
+                <div class="workflow-item">
+                  <span class="workflow-label">Создание</span>
+                  <ul>
+                    <li>Flux, Pony, SDXL + FaceID, IP-Adapter → обученная модель (15–25 изображений)</li>
+                    <li>Nano Banana 2 / Pro — быстрые проверки и стабильность</li>
+                    <li>Higgsfield Soul 2.0 — сборка персонажа по частям</li>
+                    <li>Reve 2.0 — генерация в 4K с точной композицией</li>
+                  </ul>
+                </div>
+                <div class="workflow-item">
+                  <span class="workflow-label">Экономия</span>
+                  <p>Наброски на быстрых моделях, короткие описания, сохранение лучших вариантов.</p>
+                </div>
+                <div class="workflow-item">
+                  <span class="workflow-label">Обход цензуры</span>
+                  <p>Мягкие формулировки («страстное объятие», «мокрое тело», «откровенная поза») + строгий негатив. Откровенный контент — только на своей машине.</p>
+                </div>
+              </div>
             </div>
           </div>
 
