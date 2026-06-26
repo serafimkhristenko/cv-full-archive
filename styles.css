@@ -2035,23 +2035,24 @@ h3 {
 .gallery-section-title {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 32px;
-  margin-bottom: 16px;
-  padding-top: 28px;
-  border-top: 1px solid var(--line);
+  gap: 14px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-top: 32px;
+  border-top: 2px solid rgba(200,241,53,0.45);
   color: var(--acid);
   font-family: "DM Mono", "SFMono-Regular", Consolas, monospace;
-  font-size: 13px;
-  letter-spacing: 0.14em;
+  font-size: 15px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(200,241,53,0.4);
 }
 
 .gallery-section-title::after {
   content: "";
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, rgba(200,241,53,0.35), transparent);
+  background: linear-gradient(90deg, rgba(200,241,53,0.55), transparent);
 }
 
 .gallery-section-title:first-child {
