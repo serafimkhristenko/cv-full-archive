@@ -326,7 +326,7 @@ main,
   gap: 28px;
   align-items: stretch;
   min-height: calc(100vh - 92px);
-  padding: 58px 0 34px;
+  padding: 58px 0 clamp(48px, 7vw, 96px);
 }
 
 .hero-copy {
