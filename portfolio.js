@@ -584,3 +584,31 @@ document.querySelectorAll(".case-card").forEach((card) => {
     toggle.textContent = isOpen ? 'Скрыть SMM-опыт' : 'Показать SMM-опыт';
   });
 })();
+
+/* ═══════════════════════════════════════════════
+   SECTION REVEAL (IntersectionObserver)
+═══════════════════════════════════════════════ */
+(function () {
+  const sections = document.querySelectorAll('.section');
+  if (!sections.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    // Fallback: show all sections immediately if observer not supported
+    sections.forEach(s => s.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  sections.forEach(s => observer.observe(s));
+})();
