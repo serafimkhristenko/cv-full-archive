@@ -158,9 +158,6 @@
 
     .hero-single {
       position: relative;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px;
       width: 100%;
       height: 100%;
       min-height: 540px;
@@ -193,6 +190,22 @@
     }
     .hero-single-item:hover {
       box-shadow: inset 0 0 0 2px var(--acid);
+    }
+
+    .hero-copy-visual {
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+    .hero-copy-visual img {
+      width: 100%;
+      max-height: 380px;
+      object-fit: contain;
+      object-position: bottom center;
+      display: block;
+      filter: drop-shadow(0 0 32px rgba(200,241,53,0.15));
     }
 
     /* ── Personal Visual Research ── */
@@ -336,6 +349,9 @@
         <div>
           <h1><span class="hero-title-line">AI Artist /</span><span class="hero-title-line hero-title-line--wide">Content Creator</span></h1>
         </div>
+        <div class="hero-copy-visual">
+          <img src="assets/character_static_08_serpent_goddess.webp" alt="Serpent goddess iGaming character" loading="lazy">
+        </div>
       </div>
 
       <aside class="hero-panel" aria-label="Featured work preview">
@@ -448,9 +464,6 @@
               </button>
               <button class="gallery-shot ai-creative-shot" type="button" data-filter-cat="characters" data-gallery-item data-src="assets/character_static_07_lion_suit.webp" data-title="Персонаж: Лев в Костюме" data-text="Антропоморфный персонаж для iGaming: Лев-предприниматель в синем бархатном костюме держит фишки и планшет с Win Big.">
                 <img loading="lazy" src="assets/character_static_07_lion_suit.webp" alt="Character design - lion in blue velvet suit holding chips and tablet" width="672" height="900">
-              </button>
-              <button class="gallery-shot ai-creative-shot" type="button" data-filter-cat="characters" data-gallery-item data-src="assets/character_static_08_serpent_goddess.webp" data-title="Персонаж: Богиня Змей" data-text="Мифологический образ: женщина-покровительница удачи, обвитая двухголовой коброй, на фоне рулетки и водопада монет.">
-                <img loading="lazy" src="assets/character_static_08_serpent_goddess.webp" alt="Character design - serpent goddess with coins and roulette wheel" width="672" height="900">
               </button>
               <button class="gallery-shot ai-creative-shot" type="button" data-filter-cat="characters" data-gallery-item data-src="assets/character_static_09_pharaoh_buff.webp" data-title="Персонаж: Фараон-Атлет" data-text="Комедийный персонаж: мускулистый фараон в нарамнике разрывает сантиметровую ленту на фоне ошарашенных слуг.">
                 <img loading="lazy" src="assets/character_static_09_pharaoh_buff.webp" alt="Character design - buff pharaoh flexing and breaking a measuring tape" width="672" height="900">
