@@ -2036,13 +2036,15 @@ h3 {
 .gallery-section-title {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 18px;
-  margin-bottom: 12px;
+  gap: 12px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
   color: var(--acid);
   font-family: "DM Mono", "SFMono-Regular", Consolas, monospace;
-  font-size: 11px;
-  letter-spacing: 0.18em;
+  font-size: 13px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -2050,12 +2052,14 @@ h3 {
   content: "";
   flex: 1;
   height: 1px;
-  background: var(--line);
+  background: linear-gradient(90deg, rgba(200,241,53,0.35), transparent);
 }
 
 .gallery-section-title:first-child {
   margin-top: 0;
-  margin-bottom: 10px;
+  padding-top: 0;
+  border-top: none;
+  margin-bottom: 14px;
 }
 
 /* Wrapper for Персонажи block — flex column so subheadings sit between grids */
