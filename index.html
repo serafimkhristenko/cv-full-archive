@@ -136,11 +136,25 @@
         grid-template-columns: 1fr;
       }
 
-      /* Баннер на мобиле — полная ширина, обрезан по центру */
+      /* Баннер на мобиле — горизонтальное изображение в рамке */
+      .wide-banner-wrap {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .wide-banner-wrap::-webkit-scrollbar {
+        display: none;
+      }
+      .wide-banner-wrap .production-wide-visual {
+        width: max-content;
+        min-width: 100%;
+      }
       .wide-banner-wrap .production-wide-visual img {
-        max-height: 220px;
-        object-fit: cover;
-        object-position: center center;
+        width: auto;
+        height: 180px;
+        max-height: none;
+        object-fit: none;
       }
       .wide-banner-label {
         display: none;
