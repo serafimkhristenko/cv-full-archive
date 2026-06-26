@@ -135,6 +135,23 @@
       .production-panel-head {
         grid-template-columns: 1fr;
       }
+
+      /* Баннер на мобиле — маленький, без плашки */
+      .wide-banner-wrap .production-wide-visual img {
+        max-height: 140px;
+        object-fit: cover;
+      }
+      .wide-banner-label {
+        display: none;
+      }
+
+      /* Видео — фиксируем соотношение сторон чтобы не было бага */
+      .avatar-demo-video {
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 9 / 16;
+        object-fit: cover;
+      }
     }
 
     /* Tools list style */
