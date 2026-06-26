@@ -1955,14 +1955,14 @@ h3 {
 
 .video-demo-section {
   margin-top: 18px;
-  display: grid;
-  grid-template-columns: minmax(220px, 0.44fr) minmax(0, 1fr);
-  gap: 18px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .video-demo-section .ai-video-board {
-  margin-top: 12px;
+  margin-top: 0;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .production-wide-visual {
@@ -2280,9 +2280,9 @@ h3 {
 }
 
 .ai-video-board {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
-  justify-content: center;
   align-items: flex-start;
 }
 
@@ -2293,12 +2293,11 @@ h3 {
   background: rgba(10, 10, 13, 0.74);
   border: 1px solid rgba(200, 241, 53, 0.28);
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.42);
-  flex: 0 0 auto;
 }
 
 .ai-video-card video {
   display: block;
-  width: 220px;
+  width: 100%;
   aspect-ratio: 9 / 16;
   object-fit: contain;
   background: #050505;
@@ -2312,7 +2311,7 @@ h3 {
   padding-top: 8px;
   color: #fff;
   font-family: "Syne", Inter, system-ui, sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
