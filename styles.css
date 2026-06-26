@@ -2078,6 +2078,54 @@ h3 {
   overflow: visible;
 }
 
+/* ── Scene integration showcase ── */
+.scene-integration-block {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.scene-integration-shot {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: 1px solid rgba(200, 241, 53, 0.24);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.42);
+  overflow: hidden;
+  cursor: zoom-in;
+  transition: box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.scene-integration-shot img {
+  display: block;
+  width: 100%;
+  height: auto;       /* ← полная высота, без обрезки */
+  object-fit: contain;
+  transition: transform 200ms ease;
+}
+
+.scene-integration-shot:hover {
+  border-color: rgba(200, 241, 53, 0.6);
+  box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.5), 0 0 28px rgba(200, 241, 53, 0.12);
+}
+
+.scene-integration-shot:hover img {
+  transform: scale(1.015);
+}
+
+.scene-integration-meta {
+  padding: 0 2px;
+}
+
+.scene-integration-meta p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
 /* ── Step gallery: captioned images like hero-label ── */
 .step-gallery {
   display: grid;
