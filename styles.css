@@ -1926,10 +1926,9 @@ h3 {
 }
 
 .avatar-production-panel {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.44fr) minmax(0, 1fr);
-  gap: 18px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .avatar-production-panel .production-visual {
