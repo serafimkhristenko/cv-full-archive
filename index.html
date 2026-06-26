@@ -136,25 +136,20 @@
         grid-template-columns: 1fr;
       }
 
-      /* Баннер на мобиле — горизонтальное изображение в рамке */
+      /* Баннер на мобиле — вся картинка целиком */
       .wide-banner-wrap {
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-      }
-      .wide-banner-wrap::-webkit-scrollbar {
-        display: none;
+        overflow: hidden;
       }
       .wide-banner-wrap .production-wide-visual {
-        width: max-content;
-        min-width: 100%;
+        width: 100%;
       }
       .wide-banner-wrap .production-wide-visual img {
-        width: auto;
-        height: 180px;
+        width: 100%;
+        height: auto;
         max-height: none;
-        object-fit: none;
+        object-fit: contain;
+        object-position: center center;
+        background: #101015;
       }
       .wide-banner-label {
         display: none;
