@@ -287,9 +287,15 @@ const lightboxPhoto = document.querySelector("[data-lightbox-photo]");
 const lightboxPlaceholder = document.querySelector("[data-lightbox-image]");
 const lightboxTitle = document.querySelector("[data-lightbox-title]");
 const lightboxText = document.querySelector("[data-lightbox-text]");
+let _prevFocus = null;
+let _lightboxKeyHandler = null;
 
 function openLightbox(title, text, src = "") {
   if (!lightbox) return;
+  // save previously focused element to restore later
+  try { _prevFocus = document.activeElement; } catch (e) { _prevFocus = null; }
+  // hide main landmarks from assistive technology
+  document.querySelectorAll('main, header, footer').forEach(el => el && el.setAttribute('aria-hidden', 'true'));
   if (lightboxPhoto && lightboxPlaceholder) {
     if (src) {
       lightboxPhoto.src = src;
@@ -306,12 +312,34 @@ function openLightbox(title, text, src = "") {
   if (lightboxText) lightboxText.textContent = text || "";
   lightbox.classList.add("open");
   document.body.style.overflow = "hidden";
+  // move focus into the dialog
+  const firstFocusable = lightbox.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+  (firstFocusable || lightbox).focus && (firstFocusable || lightbox).focus();
+
+  // simple focus trap: keep focus inside lightbox
+  _lightboxKeyHandler = function (e) {
+    if (e.key === 'Tab') {
+      const nodes = Array.from(lightbox.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(n => !n.disabled && n.offsetParent !== null);
+      if (!nodes.length) { e.preventDefault(); return; }
+      const first = nodes[0];
+      const last = nodes[nodes.length - 1];
+      if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    }
+    if (e.key === 'Escape') { closeLightbox(); }
+  };
+  window.addEventListener('keydown', _lightboxKeyHandler);
 }
 
 function closeLightbox() {
   if (!lightbox) return;
   lightbox.classList.remove("open");
   document.body.style.overflow = "";
+  // restore accessibility state
+  document.querySelectorAll('main, header, footer').forEach(el => el && el.removeAttribute('aria-hidden'));
+  // remove trap and restore focus
+  if (_lightboxKeyHandler) { window.removeEventListener('keydown', _lightboxKeyHandler); _lightboxKeyHandler = null; }
+  try { _prevFocus && _prevFocus.focus && _prevFocus.focus(); } catch (e) { /* ignore */ }
 }
 
 document.querySelectorAll("[data-close-lightbox]").forEach((button) => {
@@ -509,8 +537,9 @@ document.querySelectorAll(".case-card").forEach((card) => {
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('is-active'));
+      filterBtns.forEach(b => { b.classList.remove('is-active'); b.setAttribute('aria-pressed', 'false'); });
       btn.classList.add('is-active');
+      btn.setAttribute('aria-pressed', 'true');
 
       const cat = btn.dataset.filter;
       galleryItems.forEach(item => {

@@ -7,10 +7,10 @@
   --line: #44444d;
   --line-soft: rgba(255, 255, 255, 0.09);
   --text: #ededf1;
-  --muted: #a3a3b4;
-  --quiet: #6f6f7e;
+  --muted: #b1b1bf;
+  --quiet: #b2b2bb;
   --acid: #c8f135;
-  --violet: #8a6dff;
+  --violet: #9e87ff;
   --coral: #ff654a;
   --cyan: #58d7ff;
   --amber: #ffd166;
@@ -278,8 +278,8 @@ main,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 34px;
-  padding: 8px 13px;
+  min-height: 44px;
+  padding: 10px 14px;
   color: var(--muted);
   background: var(--surface-2);
   border: 1px solid var(--line);
@@ -298,6 +298,12 @@ main,
   background: rgba(200, 241, 53, 0.06);
   transform: translate(-1px, -1px);
   box-shadow: 5px 5px 0 var(--shadow), 0 0 28px rgba(200, 241, 53, 0.14);
+}
+
+.nav a:active,
+.pixel-button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 var(--shadow);
 }
 
 .nav .contact-link {
@@ -990,6 +996,14 @@ h1 {
 
 .section {
   padding: clamp(48px, 7vw, 96px) 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .thumbnail-showcase.section {
@@ -2029,6 +2043,32 @@ h3 {
 .ai-creative-shot img {
   object-position: center;
 }
+
+.gallery-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  margin-bottom: 12px;
+  color: var(--acid);
+  font-family: "DM Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.gallery-section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.gallery-section-title:first-child {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
 
 .style-slider {
   min-width: 0;
@@ -3223,8 +3263,9 @@ button:hover *,
 }
 
 /* Compact portfolio scale */
-body {
-  font-size: 13px;
+/* Keep readable minimum font-size on small screens to avoid iOS zoom */
+@media (max-width: 700px) {
+  body { font-size: 16px; }
 }
 
 .shell {
@@ -3241,8 +3282,9 @@ body {
 
 .nav a,
 .pixel-button {
-  min-height: 30px;
-  padding: 6px 11px;
+  /* keep touch targets at 44px even in compact layout */
+  min-height: 44px;
+  padding: 10px 12px;
 }
 
 .hero {
