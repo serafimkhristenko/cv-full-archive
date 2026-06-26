@@ -2132,8 +2132,8 @@ h3 {
 /* ── Step gallery: captioned images like hero-label ── */
 .step-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
   flex-shrink: 0;
 }
 
