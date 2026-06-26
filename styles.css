@@ -3251,6 +3251,27 @@ h3 {
   .lightbox-meta h3 {
     margin-top: 0;
   }
+
+  /* ── Галерея персонажей: 2 колонки на мобиле вместо 4 ── */
+  .ai-creative-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  /* Убираем хаотичные aspect-ratio на мелком экране — все карточки одинаковые */
+  .ai-creative-shot {
+    aspect-ratio: 3 / 4;
+  }
+
+  .ai-creative-shot:nth-child(4n + 1),
+  .ai-creative-shot:nth-child(5n + 2) {
+    aspect-ratio: 3 / 4;
+  }
+
+  .ai-creative-shot:nth-child(7n + 3) {
+    grid-row: span 1;
+    aspect-ratio: 3 / 4;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
