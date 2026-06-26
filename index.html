@@ -163,13 +163,12 @@
       min-height: 540px;
       overflow: hidden;
       background: #101015;
-      display: flex;
-      gap: 8px;
     }
     .hero-single-item {
       display: block;
-      flex: 1;
-      min-width: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 540px;
       padding: 0;
       margin: 0;
       background: none;
@@ -186,6 +185,10 @@
       display: block;
       transition: transform 0.4s ease;
       background: #101015;
+    }
+    .hero-single-item--solo img {
+      object-fit: contain;
+      object-position: center center;
     }
     .hero-single-item:hover img {
       transform: scale(1.03);
@@ -358,11 +361,8 @@
 
       <aside class="hero-panel" aria-label="Featured work preview">
         <div class="hero-single" data-hero-preview aria-label="Hero AI visual">
-          <button class="hero-single-item" type="button" data-gallery-item data-src="assets/board_ai_serpent_temple.webp" data-title="AI visual - serpent temple" data-text="Фэнтези-сцена для промо, key visual и атмосферного контента.">
+          <button class="hero-single-item hero-single-item--solo" type="button" data-gallery-item data-src="assets/board_ai_serpent_temple.webp" data-title="AI visual - serpent temple" data-text="Фэнтези-сцена для промо, key visual и атмосферного контента.">
             <img src="assets/board_ai_serpent_temple.webp" alt="AI-визуал храма со змеем" width="859" height="1280" loading="lazy">
-          </button>
-          <button class="hero-single-item" type="button" data-gallery-item data-src="assets/character_static_08_serpent_goddess.webp" data-title="Serpent goddess · iGaming character" data-text="Персонаж для iGaming — серпентийская богиня с монетами и рулеткой.">
-            <img src="assets/character_static_08_serpent_goddess.webp" alt="Serpent goddess character" width="800" height="1200" loading="lazy">
           </button>
         </div>
           <div class="hero-label">
