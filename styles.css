@@ -2454,7 +2454,7 @@ h3 {
 .cta-band {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 24px;
+  gap: 40px;
   align-items: center;
   margin: 96px 0 72px;
   padding: 32px 36px;
@@ -2462,6 +2462,57 @@ h3 {
   border: 1px solid rgba(200,241,53,0.25);
   border-left: 4px solid var(--acid);
   box-shadow: 8px 8px 0 var(--shadow), 0 0 40px rgba(200,241,53,0.06);
+}
+
+.cta-band-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cta-poster-wrap {
+  flex-shrink: 0;
+}
+
+.cta-poster-frame {
+  position: relative;
+  width: 220px;
+  padding: 10px;
+  background: linear-gradient(135deg, #2a1f0a, #4a3010, #2a1f0a);
+  border: 2px solid #8b6914;
+  box-shadow:
+    0 0 0 1px #c8a84b,
+    0 0 0 3px #6b4f0d,
+    0 0 0 4px #c8a84b,
+    6px 6px 20px rgba(0,0,0,0.6);
+}
+
+.cta-poster-frame::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(200, 168, 75, 0.4);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cta-poster-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: sepia(0.08) contrast(1.05);
+}
+
+.cta-poster-caption {
+  margin-top: 10px;
+  padding: 0 2px;
+  color: #a8884a;
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  text-align: center;
+  font-style: italic;
 }
 
 .cta-buttons {
