@@ -187,6 +187,9 @@
     .hero-single-item:hover img {
       transform: scale(1.03);
     }
+    .hero-single-item:hover {
+      box-shadow: inset 0 0 0 2px var(--acid);
+    }
 
     /* ── Personal Visual Research ── */
     .project-case {
@@ -265,6 +268,11 @@
       transform: scale(1.025);
       filter: brightness(1.08);
     }
+    .project-image:hover,
+    .project-image:focus-visible {
+      box-shadow: 0 0 20px rgba(200, 241, 53, 0.15);
+      border-color: var(--acid);
+    }
     .project-image--lead { min-height: 640px; }
     .project-support-grid {
       display: grid;
@@ -329,7 +337,7 @@
       <aside class="hero-panel" aria-label="Featured work preview">
         <div class="hero-single" data-hero-preview aria-label="Hero AI visual">
           <button class="hero-single-item" type="button" data-gallery-item data-src="assets/board_ai_serpent_temple.webp" data-title="AI visual - serpent temple" data-text="Фэнтези-сцена для промо, key visual и атмосферного контента.">
-            <img src="assets/board_ai_serpent_temple.webp" alt="AI-визуал храма со змеем">
+            <img src="assets/board_ai_serpent_temple.webp" alt="AI-визуал храма со змеем" width="859" height="1280" loading="lazy">
           </button>
         </div>
           <div class="hero-label">
@@ -345,7 +353,7 @@
     <div class="wide-banner-block shell">
       <div class="wide-banner-wrap">
         <button class="production-wide-visual" type="button" data-gallery-item data-src="assets/ai_production_wide_jungle.webp" data-title="B2B campaign — key visual" data-text="Широкий key visual для B2B-рекламной кампании: разработка персонажей, динамичной сцены и визуальной концепции под серию коротких AI-видео.">
-          <img loading="lazy" src="assets/ai_production_wide_jungle.webp" alt="AI-креатив с персонажами в джунглях">
+          <img loading="lazy" src="assets/ai_production_wide_jungle.webp" alt="AI-креатив с персонажами в джунглях" width="1280" height="328">
         </button>
         <div class="wide-banner-label">
           <div>
@@ -400,44 +408,44 @@
             <div class="section-kicker-line"></div>
             <div class="production-panel-head">
               <span class="production-panel-number">01</span>
-              <h3>Персонажи и AI-визуал</h3>
-              <p>Персонажи и визуал для рекламных креативов и слотов в нише iGaming. Быстро считываемый герой, консистентный образ.</p>
+              <h3>Персонажи</h3>
+              <p>40+ уникальных персонажей для iGaming и геймдева. Консистентный образ, чёткий силуэт, работающий на любом формате — от баннера до слота.</p>
             </div>
             <div class="project-meta">
-              <div><span>Role</span><strong>Full pipeline</strong></div>
-              <div><span>Tools</span><strong>Nano Banana · Higgsfield Soul 2.0 · Rave 2 · Flux 2.2 · Midjourney · Grok Imagine · Recraft 4.1 · Adobe Firefly · Photoshop · Illustrator · графический планшет · воображение · ресёрч</strong></div>
-              <div><span>Output</span><strong>40+ персонажей · 150+ визуалов</strong></div>
+              <div><span>Role</span><strong>Character design · Full pipeline</strong></div>
+              <div><span>Tools</span><strong>Midjourney · Flux 2.2 · Recraft 4.1 · Grok Imagine · Adobe Firefly · Photoshop · Illustrator · графический планшет</strong></div>
+              <div><span>Output</span><strong>40+ персонажей</strong></div>
             </div>
           </div>
 
           <div class="production-visual ai-creative-gallery" aria-label="AI creative gallery" id="ai-gallery-grid">
             <button class="gallery-shot ai-creative-shot" type="button" data-filter-cat="characters" data-gallery-item data-src="assets/ai_creative_02_king.webp" data-title="AI creative - king character" data-text="Персонажный визуал с рекламной читаемостью, костюмом, жестом и чистым контуром.">
-              <img loading="lazy" src="assets/ai_creative_02_king.webp" alt="AI king character creative">
+              <img loading="lazy" src="assets/ai_creative_02_king.webp" alt="AI king character creative" width="1031" height="1280">
             </button>
             <button class="gallery-shot ai-creative-shot" type="button" data-filter-cat="characters" data-gallery-item data-src="assets/ai_creative_03_pharaoh.webp" data-title="AI creative - pharaoh scene" data-text="Коммерческий character visual: персонаж, действие, эмоция и понятная сцена для короткого ролика.">
-              <img loading="lazy" src="assets/ai_creative_03_pharaoh.webp" alt="AI pharaoh character scene">
+              <img loading="lazy" src="assets/ai_creative_03_pharaoh.webp" alt="AI pharaoh character scene" width="1031" height="1280">
             </button>
             <button class="gallery-shot ai-creative-shot" type="button" data-filter-cat="characters" data-gallery-item data-src="assets/ai_creative_04_wizard_bird.webp" data-title="AI creative - wizard character" data-text="Фэнтези-персонаж с магическим prop, светом, окружением и акцентом на образ.">
-              <img loading="lazy" src="assets/ai_creative_04_wizard_bird.webp" alt="AI wizard character with glowing bird">
+              <img loading="lazy" src="assets/ai_creative_04_wizard_bird.webp" alt="AI wizard character with glowing bird" width="896" height="1200">
             </button>
             <button class="gallery-shot ai-creative-shot" type="button" data-filter-cat="characters" data-gallery-item data-src="assets/ai_creative_05_wizard.webp" data-title="AI creative - fantasy poster" data-text="Постерный AI-визуал с насыщенной детализацией, реквизитом и ярким персонажем.">
-              <img loading="lazy" src="assets/ai_creative_05_wizard.webp" alt="AI fantasy wizard poster">
+              <img loading="lazy" src="assets/ai_creative_05_wizard.webp" alt="AI fantasy wizard poster" width="956" height="1280">
             </button>
             
             <button class="gallery-shot ai-creative-shot" type="button" data-filter-cat="characters" data-gallery-item data-src="assets/ai_creative_09_alchemist_character.webp" data-title="AI creative - alchemist character" data-text="Персонажный визуал с эмоцией, предметом действия и зеленым световым акцентом.">
-              <img loading="lazy" src="assets/ai_creative_09_alchemist_character.webp" alt="AI alchemist character creative">
+              <img loading="lazy" src="assets/ai_creative_09_alchemist_character.webp" alt="AI alchemist character creative" width="1280" height="1280">
             </button>
             <button class="gallery-shot ai-creative-shot" type="button" data-filter-cat="characters" data-gallery-item data-src="assets/ai_creative_10_pizza_jester.webp" data-title="AI creative - pizza jester" data-text="Развлекательный персонажный креатив с динамикой, движением и понятным объектом внимания.">
-              <img loading="lazy" src="assets/ai_creative_10_pizza_jester.webp" alt="AI pizza jester character creative">
+              <img loading="lazy" src="assets/ai_creative_10_pizza_jester.webp" alt="AI pizza jester character creative" width="859" height="1280">
             </button>
             <button class="gallery-shot ai-creative-shot" type="button" data-filter-cat="characters" data-gallery-item data-src="assets/ai_creative_11_bike_city.webp" data-title="AI creative - anime rider" data-text="Динамичный кадр для промо и short-form: движение камеры, городской масштаб и герой в центре.">
-              <img loading="lazy" src="assets/ai_creative_11_bike_city.webp" alt="AI anime rider over city">
+              <img loading="lazy" src="assets/ai_creative_11_bike_city.webp" alt="AI anime rider over city" width="964" height="1280">
             </button>
             <button class="gallery-shot ai-creative-shot" type="button" data-filter-cat="characters" data-gallery-item data-src="assets/ai_creative_12_queen.webp" data-title="AI creative - queen portrait" data-text="Портретный AI-визуал с контролем света, украшений, цвета и выразительности персонажа.">
-              <img loading="lazy" src="assets/ai_creative_12_queen.webp" alt="AI queen portrait creative">
+              <img loading="lazy" src="assets/ai_creative_12_queen.webp" alt="AI queen portrait creative" width="1280" height="1280">
             </button>
             <button class="gallery-shot ai-creative-shot" type="button" data-filter-cat="characters" data-gallery-item data-src="assets/ai_creative_14_gorilla_king.webp" data-title="AI creative - gorilla king" data-text="Персонажный AI-визуал для игровой рекламы: выразительный силуэт, корона, аксессуары и чистый светлый фон.">
-              <img loading="lazy" src="assets/ai_creative_14_gorilla_king.webp" alt="AI gorilla king character creative">
+              <img loading="lazy" src="assets/ai_creative_14_gorilla_king.webp" alt="AI gorilla king character creative" width="716" height="1024">
             </button>
             
             
@@ -556,20 +564,20 @@
         </div>
         <div class="project-gallery project-gallery--lead-right">
           <button class="project-image project-image--lead" type="button" data-gallery-item data-src="assets/board_ai_halo_figure.webp" data-title="Personal Visual Research — Halo figure" data-text="Монохромное исследование свечения, сакральной иконографии и цифровой фактуры.">
-            <img loading="lazy" src="assets/board_ai_halo_figure.webp" alt="Halo figure">
+            <img loading="lazy" src="assets/board_ai_halo_figure.webp" alt="Halo figure" width="832" height="1248">
           </button>
           <div class="project-support-grid project-support-grid--dense">
             <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_cyborg_guardian.webp" data-title="Personal Visual Research — Cyber guardian" data-text="Тёмный character study с металлическими материалами.">
-              <img loading="lazy" src="assets/board_ai_cyborg_guardian.webp" alt="Cyber guardian">
+              <img loading="lazy" src="assets/board_ai_cyborg_guardian.webp" alt="Cyber guardian" width="960" height="1280">
             </button>
             <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_thorn_poster.webp" data-title="Personal Visual Research — Thorn poster" data-text="Blackwork-постер с органической структурой и жёстким контрастом.">
-              <img loading="lazy" src="assets/board_ai_thorn_poster.webp" alt="Thorn poster">
+              <img loading="lazy" src="assets/board_ai_thorn_poster.webp" alt="Thorn poster" width="832" height="1248">
             </button>
             <button class="project-image" type="button" data-gallery-item data-src="assets/board_ai_skull_closeup.webp" data-title="Personal Visual Research — Skull detail" data-text="Крупный фрагмент для исследования материала и character detail.">
-              <img loading="lazy" src="assets/board_ai_skull_closeup.webp" alt="Mechanical skull closeup">
+              <img loading="lazy" src="assets/board_ai_skull_closeup.webp" alt="Mechanical skull closeup" width="1024" height="1024">
             </button>
             <button class="project-image project-image--wide" type="button" data-gallery-item data-src="assets/board_ai_sky_angel.webp" data-title="Personal Visual Research — Sky angel" data-text="Кинематографичный кадр с зерном, небом и эффектом вспышки.">
-              <img loading="lazy" src="assets/board_ai_sky_angel.webp" alt="Sky angel">
+              <img loading="lazy" src="assets/board_ai_sky_angel.webp" alt="Sky angel" width="1184" height="896">
             </button>
           </div>
         </div>
@@ -626,13 +634,13 @@
               </div>
               <div class="case-gallery" aria-label="The Gallery screenshots">
                 <button class="gallery-shot" type="button" data-gallery-item data-src="assets/gallery_artist_post_metrics.webp" data-title="The Gallery - artist feature" data-text="Регулярные публикации об авторах собирали охваты и вовлечение вокруг платформы.">
-                  <img loading="lazy" src="assets/gallery_artist_post_metrics.webp" alt="The Gallery artist feature metrics">
+                  <img loading="lazy" src="assets/gallery_artist_post_metrics.webp" alt="The Gallery artist feature metrics" width="673" height="1012">
                 </button>
                 <button class="gallery-shot" type="button" data-gallery-item data-src="assets/gallery_open_calls_metrics.webp" data-title="The Gallery - open calls" data-text="Подборки open calls стабильно приводили релевантную аудиторию художников.">
-                  <img loading="lazy" src="assets/gallery_open_calls_metrics.webp" alt="The Gallery open calls metrics">
+                  <img loading="lazy" src="assets/gallery_open_calls_metrics.webp" alt="The Gallery open calls metrics" width="678" height="1011">
                 </button>
                 <button class="gallery-shot" type="button" data-gallery-item data-src="assets/gallery_popup_photo_01.webp" data-title="The Gallery - pop-up" data-text="400+ человек на поп-апе в ноябре 2025.">
-                  <img loading="lazy" src="assets/gallery_popup_photo_01.webp" alt="The Gallery pop-up event">
+                  <img loading="lazy" src="assets/gallery_popup_photo_01.webp" alt="The Gallery pop-up event" width="775" height="1031">
                 </button>
               </div>
             </div>
@@ -674,10 +682,10 @@
               </div>
               <div class="case-gallery kino-gallery" aria-label="Кино с Алисой screenshots">
                 <button class="gallery-shot" type="button" data-gallery-item data-src="assets/kino_guest_remizorro.webp" data-title="Гостевая рубрика" data-text="Гостевая рубрика для кинокритиков помогала приводить новых подписчиков.">
-                  <img loading="lazy" src="assets/kino_guest_remizorro.webp" alt="Кино с Алисой гостевая рубрика">
+                  <img loading="lazy" src="assets/kino_guest_remizorro.webp" alt="Кино с Алисой гостевая рубрика" width="514" height="1664">
                 </button>
                 <button class="gallery-shot" type="button" data-gallery-item data-src="assets/kino_reel_metric_01.webp" data-title="Reels metrics" data-text="Reels приводили новую аудиторию и участников киноклуба.">
-                  <img loading="lazy" src="assets/kino_reel_metric_01.webp" alt="Кино с Алисой метрики Reels">
+                  <img loading="lazy" src="assets/kino_reel_metric_01.webp" alt="Кино с Алисой метрики Reels" width="590" height="940">
                 </button>
                 <button class="gallery-shot" type="button" data-gallery-item data-src="assets/kino_tg_growth.webp" data-title="Telegram growth" data-text="Рост аудитории и стабильная динамика канала.">
                   <img loading="lazy" src="assets/kino_tg_growth.webp" alt="Кино с Алисой рост Telegram">
