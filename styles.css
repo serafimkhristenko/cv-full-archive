@@ -2081,6 +2081,70 @@ h3 {
   flex-shrink: 0;
 }
 
+/* ── Step gallery: captioned images like hero-label ── */
+.step-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.step-shot {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.step-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+  transition: transform 0.35s ease;
+}
+
+.step-shot:hover img {
+  transform: scale(1.04);
+}
+
+.step-caption {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  padding: 10px 12px;
+  background: rgba(16, 16, 19, 0.94);
+  border: 1px solid rgba(200, 241, 53, 0.58);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.55), 0 0 18px rgba(200, 241, 53, 0.08);
+  backdrop-filter: blur(14px);
+  pointer-events: none;
+}
+
+.step-caption strong {
+  display: block;
+  color: #fff;
+  font-family: "Syne", Inter, system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.15;
+}
+
+.step-caption span {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-family: "DM Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+}
+
 .style-slider {
   min-width: 0;
   padding: 12px;
